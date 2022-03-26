@@ -1,0 +1,20 @@
+
+.forecast {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forecast-day {
+    font-size: 0.8rem;
+}
+
+.forecast-icon svg {
+    transform: scale(1.5);
+    margin: 0 0 0.75rem 0;
+}
+
+.forecast-temp {
+    font-size: 0.9rem;
+}

@@ -1,0 +1,41 @@
+
+.time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 0px;
+    width: 180px;
+    height: 110px;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.time-value {
+    font-size: 2.8rem;
+    margin: 0;
+    text-shadow: 2px 4px rgba(255, 255, 255, 0.3);
+    vertical-align: center;
+}
+
+.time-ampm-section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1px 12px 0 12px;
+    width: 100%;
+}
+
+.time-ampm {
+    font-size: 1rem;
+    text-shadow: 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.time-caption {
+    font-size: 0.8rem;
+}
+
+.time-sep {
+    font-size: 0.8rem;
+    color: black;
+}
