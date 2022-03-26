@@ -16,8 +16,9 @@ import {
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+//require('dotenv').config();
+
 const weatherAPI = {
-    key: "5a4f2e4e670e4237f3f1424936854c1c",
     base: "https://api.openweathermap.org/data/2.5/"
 }
 
@@ -52,13 +53,13 @@ function Weather() {
             return;
         }
 
-        fetch(`${weatherAPI.base}weather?q=${query}&units=metric&APPID=${weatherAPI.key}`) //fetch data
+        fetch(`${weatherAPI.base}weather?q=${query}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`) //fetch data
             .then(res => res.json())
             .then(result => {
                 setWeather(result); //update weather
             }).catch(err => console.log("ERROR : " + err));
         
-        fetch(`${weatherAPI.base}forecast?q=${query}&units=metric&APPID=${weatherAPI.key}`) //fetch data
+        fetch(`${weatherAPI.base}forecast?q=${query}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`) //fetch data
             .then(res => res.json())
             .then(result => {
 
